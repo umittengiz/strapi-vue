@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouse_movements",
+  "info": {
+    "name": "Warehouse Movement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "warehouse": {
+      "model": "warehouses",
+      "via": "warehouse_movements"
+    },
+    "product": {
+      "via": "warehouse_movements",
+      "model": "products"
+    },
+    "batch": {
+      "model": "batches",
+      "via": "warehouse_movements"
+    },
+    "unit": {
+      "model": "units",
+      "via": "warehouse_movements"
+    },
+    "tax": {
+      "model": "taxes",
+      "via": "warehouse_movements"
+    }
+  }
+}

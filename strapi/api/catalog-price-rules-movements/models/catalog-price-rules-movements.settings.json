@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalog_price_rules_movements",
+  "info": {
+    "name": "Catalog Price Rules Movement",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

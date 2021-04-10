@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_roles",
+  "info": {
+    "name": "User Role",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role_authorizations": {
+      "via": "user_role",
+      "collection": "role-authorizations"
+    },
+    "staff": {
+      "via": "user_role",
+      "collection": "staffs"
+    }
+  }
+}

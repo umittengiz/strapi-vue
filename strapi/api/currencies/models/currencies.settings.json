@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currencies",
+  "info": {
+    "name": "Currency",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "sign": {
+      "type": "string"
+    },
+    "abbreviation": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "product_prices": {
+      "via": "currency",
+      "collection": "product-prices"
+    }
+  }
+}

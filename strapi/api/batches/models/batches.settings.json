@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "batches",
+  "info": {
+    "name": "Batch",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "lot": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "product": {
+      "via": "batch",
+      "collection": "products",
+      "dominant": true
+    },
+    "warehouse_movements": {
+      "via": "batch",
+      "collection": "warehouse-movements"
+    }
+  }
+}

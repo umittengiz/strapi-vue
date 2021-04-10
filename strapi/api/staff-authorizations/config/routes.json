@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/staff-authorizations",
+      "handler": "staff-authorizations.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-authorizations/count",
+      "handler": "staff-authorizations.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/staff-authorizations/:id",
+      "handler": "staff-authorizations.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/staff-authorizations",
+      "handler": "staff-authorizations.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/staff-authorizations/:id",
+      "handler": "staff-authorizations.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/staff-authorizations/:id",
+      "handler": "staff-authorizations.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

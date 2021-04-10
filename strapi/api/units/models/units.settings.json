@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "name": "Unit",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "products": {
+      "via": "unit",
+      "collection": "products"
+    },
+    "warehouse_movements": {
+      "via": "unit",
+      "collection": "warehouse-movements"
+    }
+  }
+}

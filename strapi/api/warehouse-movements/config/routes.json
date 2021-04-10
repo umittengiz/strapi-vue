@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/warehouse-movements",
+      "handler": "warehouse-movements.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/warehouse-movements/count",
+      "handler": "warehouse-movements.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/warehouse-movements/:id",
+      "handler": "warehouse-movements.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/warehouse-movements",
+      "handler": "warehouse-movements.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/warehouse-movements/:id",
+      "handler": "warehouse-movements.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/warehouse-movements/:id",
+      "handler": "warehouse-movements.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

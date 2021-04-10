@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attributes",
+  "info": {
+    "name": "Attribute",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "visibility": {
+      "type": "string",
+      "required": true
+    },
+    "attribute_options": {
+      "via": "attribute",
+      "collection": "attribute-options"
+    },
+    "attribute_set": {
+      "via": "attribute",
+      "collection": "attribute-sets"
+    }
+  }
+}

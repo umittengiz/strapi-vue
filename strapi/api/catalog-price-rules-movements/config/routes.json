@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules-movements",
+      "handler": "catalog-price-rules-movements.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules-movements/count",
+      "handler": "catalog-price-rules-movements.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules-movements/:id",
+      "handler": "catalog-price-rules-movements.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/catalog-price-rules-movements",
+      "handler": "catalog-price-rules-movements.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/catalog-price-rules-movements/:id",
+      "handler": "catalog-price-rules-movements.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/catalog-price-rules-movements/:id",
+      "handler": "catalog-price-rules-movements.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

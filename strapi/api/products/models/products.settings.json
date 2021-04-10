@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "barcode": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "deletedAt": {
+      "type": "datetime"
+    },
+    "batch": {
+      "collection": "batches",
+      "via": "product"
+    },
+    "orders": {
+      "via": "products",
+      "collection": "orders"
+    },
+    "product_images": {
+      "collection": "product-images",
+      "via": "product"
+    },
+    "product_prices": {
+      "collection": "product-prices",
+      "via": "product"
+    },
+    "unit": {
+      "model": "units",
+      "via": "products"
+    },
+    "warehouse_movements": {
+      "collection": "warehouse-movements",
+      "via": "product"
+    }
+  }
+}

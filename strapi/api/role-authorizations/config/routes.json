@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/role-authorizations",
+      "handler": "role-authorizations.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/role-authorizations/count",
+      "handler": "role-authorizations.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/role-authorizations/:id",
+      "handler": "role-authorizations.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/role-authorizations",
+      "handler": "role-authorizations.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/role-authorizations/:id",
+      "handler": "role-authorizations.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/role-authorizations/:id",
+      "handler": "role-authorizations.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

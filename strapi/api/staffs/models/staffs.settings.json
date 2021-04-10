@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staffs",
+  "info": {
+    "name": "Staffs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "orders": {
+      "via": "staff",
+      "collection": "orders"
+    },
+    "user_role": {
+      "model": "user-roles",
+      "via": "staff"
+    }
+  }
+}

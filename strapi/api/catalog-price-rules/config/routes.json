@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules",
+      "handler": "catalog-price-rules.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules/count",
+      "handler": "catalog-price-rules.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-price-rules/:id",
+      "handler": "catalog-price-rules.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/catalog-price-rules",
+      "handler": "catalog-price-rules.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/catalog-price-rules/:id",
+      "handler": "catalog-price-rules.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/catalog-price-rules/:id",
+      "handler": "catalog-price-rules.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

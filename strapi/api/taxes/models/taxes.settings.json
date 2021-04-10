@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "taxes",
+  "info": {
+    "name": "Tax",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "percentage": {
+      "type": "decimal",
+      "required": true
+    },
+    "warehouse_movements": {
+      "via": "tax",
+      "collection": "warehouse-movements"
+    }
+  }
+}

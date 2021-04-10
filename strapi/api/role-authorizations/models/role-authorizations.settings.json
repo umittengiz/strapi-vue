@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "role_authorizations",
+  "info": {
+    "name": "Role Authorization",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "authorizationId": {
+      "type": "integer",
+      "required": true
+    },
+    "user_role": {
+      "model": "user-roles",
+      "via": "role_authorizations"
+    }
+  }
+}

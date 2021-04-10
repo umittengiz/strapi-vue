@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouses",
+  "info": {
+    "name": "Warehouse",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "warehouse_movements": {
+      "via": "warehouse",
+      "collection": "warehouse-movements"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/attribute-options",
+      "handler": "attribute-options.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/attribute-options/count",
+      "handler": "attribute-options.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/attribute-options/:id",
+      "handler": "attribute-options.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/attribute-options",
+      "handler": "attribute-options.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/attribute-options/:id",
+      "handler": "attribute-options.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/attribute-options/:id",
+      "handler": "attribute-options.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

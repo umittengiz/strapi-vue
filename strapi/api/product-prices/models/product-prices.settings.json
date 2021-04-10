@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_prices",
+  "info": {
+    "name": "Product Price",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "salePrice": {
+      "type": "decimal"
+    },
+    "normalPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "costPrice": {
+      "type": "decimal"
+    },
+    "product": {
+      "via": "product_prices",
+      "model": "products"
+    },
+    "currency": {
+      "model": "currencies",
+      "via": "product_prices"
+    }
+  }
+}
