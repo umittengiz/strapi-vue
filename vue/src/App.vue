@@ -1,21 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/first">First</router-link> |
-      <router-link to="/restaurants">Restaurants</router-link> |
-      <router-link to="/product-detail">Product Detail</router-link>
-    </div>
-    <hr>
-    <router-view/>
+    <Layout/>
   </div>
 </template>
 
 <script>
+import Layout from "./components/molecules/Layout.vue";
 export default {
+  data() {
+    return {
+      navbarLinks: [
+        {
+          title: 'Home',
+          slug: '/'
+        },
+        {
+          title: 'About',
+          slug: '/about'
+        },
+        {
+          title: 'First',
+          slug: '/first'
+        },
+        {
+          title: 'Restaurants',
+          slug: '/restaurants'
+        },
+        {
+          title: 'Dashboard',
+          slug: '/dashboard'
+        },
+        {
+          title: 'Product Detail',
+          slug: '/product-detail'
+        },
+      ]
+    }
+  },
   components: {
-    
+    Layout
   },
 }
 </script>
@@ -23,7 +46,9 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Century Gothic, Staatliches, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
