@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Home</h1>
+    <ToolsSearchBar :placeholder="placeholder" />
+    <!-- <p>{{ searchText }}</p> -->
+    <ToolsText :text="toolsText" />
+    <ToolsButton :value="toolsButtonVal" :route="toolsTo" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import ToolsButton from "../components/tools/ToolsButton.vue";
+import ToolsSearchBar from "../components/tools/ToolsSearchBar.vue";
+import ToolsText from "../components/tools/ToolsText.vue";
 export default {
+  components: { ToolsSearchBar, ToolsText, ToolsButton },
   name: "Home",
-  components: {
-    HelloWorld,
+  data() {
+    return {
+      placeholder: "pholder",
+      toolsText: "ptext",
+      toolsButtonVal: "pbutton",
+      toolsTo: "/tables",
+    };
   },
 };
 </script>
